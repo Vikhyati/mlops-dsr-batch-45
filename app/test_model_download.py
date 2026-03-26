@@ -4,7 +4,7 @@ load_env() # this loads the variables in the .env file into the environment vari
 assert 'WANDB_API_KEY' in os.environ, "WANDB_API_KEY not found in environment variables"
 import wandb 
 
-artifact_path = "jaguars/mlops_dsr_batch_45/resnet18:v1"
+artifact_path = "vikhyati0855-data-science-retreat/mlops_dsr_batch_45/resnet18:v0"
 
 MODELS_DIR = "models"
 MODEL_FILENAME = 'best_model.pth'
@@ -17,5 +17,4 @@ api = wandb.Api()
 
 artifact = api.artifact(artifact_path, type='model')
 artifact.download(root=MODELS_DIR)
-
 
